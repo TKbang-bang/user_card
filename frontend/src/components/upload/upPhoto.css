@@ -1,0 +1,80 @@
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    background-color: #3e467f75;   
+}
+
+.upload form{
+    background: #95efce;
+    color: #3e467f;
+    padding: 4rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+}
+
+.upload form img{
+    width: 12rem;
+    height: 12rem;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.upload form .er{
+    color: #c32626;
+}
+
+.upload form button{
+    border: none;
+    color: #95efce;
+    background-color: #3e467f;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.upload form .pClick{
+    cursor: pointer;
+    background-color: #3e467f;
+    color: #95efce;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.inputPhoto{
+    display: none;
+}
+
+
+@media only screen and (max-width: 1007px){
+    .upload form{
+        padding: 5rem 0;
+        width: 40rem;
+        
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .upload{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100svh;
+        background-color: #3e467f75;   
+    }
+    
+    .upload form{
+        padding: 4rem 5rem;
+    }
+}
+

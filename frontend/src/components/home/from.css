@@ -1,0 +1,146 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    background-color: #3e467f75;
+}
+
+.container .card{
+    background: #95efce;
+    color: #3e467f;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    width: 25rem;
+    border-radius: 5px;
+}
+
+.container .card div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.container .card div img{
+    width: 12rem;
+    height: 12rem;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container .card div a{
+    display: block;
+    text-decoration: none;
+    color: #95efce;
+    background-color: #3e467f;
+    padding: .2rem .5rem;
+    border-radius: 20px;
+    margin-top: .4rem;
+}
+
+
+.container .card > a{
+    display: block;
+    text-decoration: none;
+    color: #95efce;
+    background-color: #3e467f;
+    width: 9rem;
+    height: 1.8rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.container .no{
+    align-items: flex-start;
+    padding-left: 2rem;
+}
+
+.container .card .divDel{
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.container .card .divDel > button{
+    color: #95efce;
+    background-color: #dd2323;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 9rem;
+    height: 1.8rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+}
+
+.container .card .divDel div {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container .card .divDel div button{
+    width: 6rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #95efce;
+    background-color: #3e467f;
+    cursor: pointer;
+}
+
+.container .card .divDel div button:first-child{
+    background-color: #dd2323;
+    color: #d4d4d4;
+}
+
+@media only screen and (max-width: 1007px){
+    .container .card{
+        padding: 5rem 0;
+        width: 40rem;
+        
+    }
+
+    .container .no{
+        padding-left: 4rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .container .card{
+        padding: 3rem 0;
+        gap: 1rem;
+        width: 22rem;
+    }
+    
+    .container .card div{
+        margin-bottom: 1rem;
+    }
+    
+    .container .card div a{
+        margin-top: .6rem;
+    }
+    
+    .container .card .divDel{
+        margin-top: 1rem;
+    }
+
+    .container .no{
+        padding-left: 2rem;
+    }
+}
