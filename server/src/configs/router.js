@@ -1,11 +1,10 @@
 const express = require("express");
 const db = require("./db.js");
 const upload = require("./multer.js");
-const path = require("path");
-const fs = require("fs");
 
 const router = express.Router();
 
+//GETTING DATA FOR PRINCIPAL PAGE
 router.get("/", (req, res) => {
   const q = "SELECT * FROM self_user";
   db.query(q, (err, data) => {
@@ -14,6 +13,7 @@ router.get("/", (req, res) => {
   });
 });
 
+//REGISTER SETTINGS
 router.post("/register", (req, res) => {
   const q = "SELECT * FROM users WHERE email = ?";
 
@@ -47,6 +47,7 @@ router.post("/register", (req, res) => {
   });
 });
 
+//LOGIN SETTINGS
 router.post("/login", (req, res) => {
   const q = "SELECT * FROM users WHERE email = ?";
   db.query(q, [req.body.email], (err, data) => {
@@ -84,6 +85,7 @@ router.post("/login", (req, res) => {
   });
 });
 
+//DELETE FROM 'cerrar sesion'
 router.delete("/delete", (req, res) => {
   const q = "DELETE FROM self_user";
   db.query(q, (err, data) => {
@@ -92,6 +94,7 @@ router.delete("/delete", (req, res) => {
   });
 });
 
+//UPLOADING IMAGES FROM CLIENT TO SERVER
 router.post("/upload", upload, (req, res) => {
   const qreq = "SELECT id FROM self_user";
   db.query(qreq, (errreq, datareq) => {
@@ -111,6 +114,7 @@ router.post("/upload", upload, (req, res) => {
   });
 });
 
+//DELETE EVERY DATA FROM USER
 router.delete("/deleteall", (req, res) => {
   const q = "SELECT id FROM self_user";
   db.query(q, (err, data) => {
